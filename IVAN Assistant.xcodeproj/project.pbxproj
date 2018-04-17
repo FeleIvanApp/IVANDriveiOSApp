@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85AC1101CA6A15BD21DB6F7E /* Pods_IVAN_Assistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB73C766D830D130639B6E56 /* Pods_IVAN_Assistant.framework */; };
 		B4EA6F0920865BF300B6CB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EA6F0820865BF300B6CB9D /* AppDelegate.swift */; };
 		B4EA6F0B20865BF300B6CB9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EA6F0A20865BF300B6CB9D /* ViewController.swift */; };
 		B4EA6F0E20865BF300B6CB9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EA6F0C20865BF300B6CB9D /* Main.storyboard */; };
 		B4EA6F1020865BF300B6CB9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4EA6F0F20865BF300B6CB9D /* Assets.xcassets */; };
 		B4EA6F1320865BF300B6CB9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EA6F1120865BF300B6CB9D /* LaunchScreen.storyboard */; };
+		B4EA6F1B2086619900B6CB9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4EA6F1A2086619800B6CB9D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		516BF7D492EBA4774EA1A169 /* Pods-IVAN Assistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVAN Assistant.release.xcconfig"; path = "Pods/Target Support Files/Pods-IVAN Assistant/Pods-IVAN Assistant.release.xcconfig"; sourceTree = "<group>"; };
+		82F394CCD842C7D15A2032CE /* Pods-IVAN Assistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVAN Assistant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IVAN Assistant/Pods-IVAN Assistant.debug.xcconfig"; sourceTree = "<group>"; };
 		B4EA6F0520865BF300B6CB9D /* IVAN Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IVAN Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4EA6F0820865BF300B6CB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4EA6F0A20865BF300B6CB9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		B4EA6F0F20865BF300B6CB9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4EA6F1220865BF300B6CB9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4EA6F1420865BF300B6CB9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4EA6F1A2086619800B6CB9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB73C766D830D130639B6E56 /* Pods_IVAN_Assistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IVAN_Assistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AC1101CA6A15BD21DB6F7E /* Pods_IVAN_Assistant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C6FA597A4BE62820C04434B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB73C766D830D130639B6E56 /* Pods_IVAN_Assistant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55AFBD359A657E66FD09B209 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82F394CCD842C7D15A2032CE /* Pods-IVAN Assistant.debug.xcconfig */,
+				516BF7D492EBA4774EA1A169 /* Pods-IVAN Assistant.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B4EA6EFC20865BF300B6CB9D = {
 			isa = PBXGroup;
 			children = (
 				B4EA6F0720865BF300B6CB9D /* IVAN Assistant */,
 				B4EA6F0620865BF300B6CB9D /* Products */,
+				55AFBD359A657E66FD09B209 /* Pods */,
+				0C6FA597A4BE62820C04434B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,7 @@
 			children = (
 				B4EA6F0820865BF300B6CB9D /* AppDelegate.swift */,
 				B4EA6F0A20865BF300B6CB9D /* ViewController.swift */,
+				B4EA6F1A2086619800B6CB9D /* GoogleService-Info.plist */,
 				B4EA6F0C20865BF300B6CB9D /* Main.storyboard */,
 				B4EA6F0F20865BF300B6CB9D /* Assets.xcassets */,
 				B4EA6F1120865BF300B6CB9D /* LaunchScreen.storyboard */,
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4EA6F1720865BF300B6CB9D /* Build configuration list for PBXNativeTarget "IVAN Assistant" */;
 			buildPhases = (
+				D9EF08734D52C1516919BEDF /* [CP] Check Pods Manifest.lock */,
 				B4EA6F0120865BF300B6CB9D /* Sources */,
 				B4EA6F0220865BF300B6CB9D /* Frameworks */,
 				B4EA6F0320865BF300B6CB9D /* Resources */,
+				AFF9981E6C6F6BA30904D26C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,12 +153,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4EA6F1320865BF300B6CB9D /* LaunchScreen.storyboard in Resources */,
+				B4EA6F1B2086619900B6CB9D /* GoogleService-Info.plist in Resources */,
 				B4EA6F1020865BF300B6CB9D /* Assets.xcassets in Resources */,
 				B4EA6F0E20865BF300B6CB9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFF9981E6C6F6BA30904D26C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IVAN Assistant/Pods-IVAN Assistant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IVAN Assistant/Pods-IVAN Assistant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9EF08734D52C1516919BEDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IVAN Assistant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B4EA6F0120865BF300B6CB9D /* Sources */ = {
@@ -272,6 +351,7 @@
 		};
 		B4EA6F1820865BF300B6CB9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82F394CCD842C7D15A2032CE /* Pods-IVAN Assistant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +367,7 @@
 		};
 		B4EA6F1920865BF300B6CB9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 516BF7D492EBA4774EA1A169 /* Pods-IVAN Assistant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
