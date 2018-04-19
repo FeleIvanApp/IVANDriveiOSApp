@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32A9BD552088078600DED929 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9BD542088078600DED929 /* UIViewExt.swift */; };
+		32A9BD57208821A200DED929 /* LoginMvp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9BD56208821A200DED929 /* LoginMvp.swift */; };
+		32A9BD5B20882E8700DED929 /* LoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9BD5A20882E8700DED929 /* LoginDelegate.swift */; };
+		32BD7B102087B18A0014BF69 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BD7B0F2087B18A0014BF69 /* LoginController.swift */; };
 		85AC1101CA6A15BD21DB6F7E /* Pods_IVAN_Assistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB73C766D830D130639B6E56 /* Pods_IVAN_Assistant.framework */; };
 		B4EA6F0920865BF300B6CB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EA6F0820865BF300B6CB9D /* AppDelegate.swift */; };
 		B4EA6F0B20865BF300B6CB9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EA6F0A20865BF300B6CB9D /* ViewController.swift */; };
@@ -17,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32A9BD542088078600DED929 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		32A9BD56208821A200DED929 /* LoginMvp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMvp.swift; sourceTree = "<group>"; };
+		32A9BD5A20882E8700DED929 /* LoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDelegate.swift; sourceTree = "<group>"; };
+		32BD7B0D2087AEBC0014BF69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32BD7B0F2087B18A0014BF69 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		516BF7D492EBA4774EA1A169 /* Pods-IVAN Assistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVAN Assistant.release.xcconfig"; path = "Pods/Target Support Files/Pods-IVAN Assistant/Pods-IVAN Assistant.release.xcconfig"; sourceTree = "<group>"; };
 		82F394CCD842C7D15A2032CE /* Pods-IVAN Assistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVAN Assistant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IVAN Assistant/Pods-IVAN Assistant.debug.xcconfig"; sourceTree = "<group>"; };
 		B4EA6F0520865BF300B6CB9D /* IVAN Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IVAN Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +59,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		32A9BD522088075B00DED929 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				32A9BD532088076400DED929 /* extensions */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		32A9BD532088076400DED929 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32A9BD542088078600DED929 /* UIViewExt.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		32BD7B0E2087B1720014BF69 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				32BD7B0F2087B18A0014BF69 /* LoginController.swift */,
+				32A9BD56208821A200DED929 /* LoginMvp.swift */,
+				32A9BD5A20882E8700DED929 /* LoginDelegate.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		55AFBD359A657E66FD09B209 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +115,9 @@
 		B4EA6F0720865BF300B6CB9D /* IVAN Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				32A9BD522088075B00DED929 /* utils */,
+				32BD7B0E2087B1720014BF69 /* login */,
+				32BD7B0D2087AEBC0014BF69 /* GoogleService-Info.plist */,
 				B4EA6F0820865BF300B6CB9D /* AppDelegate.swift */,
 				B4EA6F0A20865BF300B6CB9D /* ViewController.swift */,
 				B4EA6F1A2086619800B6CB9D /* GoogleService-Info.plist */,
@@ -215,7 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A9BD57208821A200DED929 /* LoginMvp.swift in Sources */,
+				32A9BD552088078600DED929 /* UIViewExt.swift in Sources */,
 				B4EA6F0B20865BF300B6CB9D /* ViewController.swift in Sources */,
+				32BD7B102087B18A0014BF69 /* LoginController.swift in Sources */,
+				32A9BD5B20882E8700DED929 /* LoginDelegate.swift in Sources */,
 				B4EA6F0920865BF300B6CB9D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,7 +400,7 @@
 				DEVELOPMENT_TEAM = 5AYNLD9436;
 				INFOPLIST_FILE = "IVAN Assistant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.IvanDrive.IVAN-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivandrive.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,7 +416,7 @@
 				DEVELOPMENT_TEAM = 5AYNLD9436;
 				INFOPLIST_FILE = "IVAN Assistant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.IvanDrive.IVAN-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivandrive.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
