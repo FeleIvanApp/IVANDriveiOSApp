@@ -49,15 +49,13 @@ class LoginController: ViewController, LoginView {
         googleSignInButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
         
         let someButton = UIButton()
-        
-        someButton.backgroundColor = .blue
-        
         view.addSubview(someButton)
         
-        someButton.anchorViewBelow(referenceView: googleSignInButton, padding: UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0))
-        someButton.anchorViewCenterX(referenceView: googleSignInButton)
-        someButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
-        someButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
+        someButton.backgroundColor = .blue
+        someButton.anchorViewBelow(referenceView: googleSignInButton)
+            .anchorViewCenterX(referenceView: googleSignInButton)
+            .anchorViewWidth(referenceView: view, multiplier: 0.8)
+            .anchorViewHeight(referenceView: view, multiplier: 0.1)
     }
 
 }

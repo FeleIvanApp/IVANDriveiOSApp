@@ -10,46 +10,83 @@ import UIKit
 
 extension UIView {
     
-    func anchorViewBelow(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) {
-        anchor(top: referenceView.bottomAnchor, bottom: nil, leading: nil, trailing: nil, size: size, padding: padding)
+    @discardableResult
+    func anchorViewBelow(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) -> UIView {
+        anchor(top: referenceView.bottomAnchor, size: size, padding: padding)
+        
+        return self
     }
     
-    func anchorViewAbove(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) {
-        anchor(top: nil, bottom: referenceView.topAnchor, leading: nil, trailing: nil, size: size, padding: padding)
+    @discardableResult
+    func anchorViewAbove(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) -> UIView {
+        anchor(bottom: referenceView.topAnchor, size: size, padding: padding)
+        
+        return self
     }
     
-    func anchorViewStart(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) {
-        anchor(top: nil, bottom: nil, leading: nil, trailing: referenceView.trailingAnchor, size: size, padding: padding)
+    @discardableResult
+    func anchorViewStart(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) -> UIView {
+        anchor(trailing: referenceView.trailingAnchor, size: size, padding: padding)
+        
+        return self
     }
     
-    func anchorViewEnd(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) {
-        anchor(top: nil, bottom: nil, leading: referenceView.trailingAnchor, trailing: nil, size: size, padding: padding)
+    @discardableResult
+    func anchorViewEnd(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) -> UIView {
+        anchor(leading: referenceView.trailingAnchor, size: size, padding: padding)
+        
+        return self
     }
     
-    func anchorViewCenterX(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) {
+    @discardableResult
+    func anchorViewCenterX(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) -> UIView {
         centerXAnchor.constraint(equalTo: referenceView.centerXAnchor).isActive = true
         
-        anchor(top: nil, bottom: nil, leading: nil, trailing: nil, size: size, padding: padding)
+        anchor(size: size, padding: padding)
+        
+        return self
     }
     
-    func anchorViewCenterY(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) {
+    @discardableResult
+    func anchorViewCenterY(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) -> UIView {
         centerYAnchor.constraint(equalTo: referenceView.centerYAnchor).isActive = true
         
-        anchor(top: nil, bottom: nil, leading: nil, trailing: nil, size: size, padding: padding)
+        anchor(size: size, padding: padding)
+        
+        return self
     }
     
-    func anchorViewCenter(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) {
+    @discardableResult
+    func anchorViewWidth(referenceView: UIView, padding: UIEdgeInsets = .zero, multiplier: CGFloat = 1.0) -> UIView {
+        anchor(width: referenceView.widthAnchor, padding: padding, multiplier: multiplier)
+        
+        return self
+    }
+    
+    @discardableResult
+    func anchorViewHeight(referenceView: UIView, padding: UIEdgeInsets = .zero, multiplier: CGFloat = 1.0) -> UIView {
+        anchor(height: referenceView.heightAnchor, padding: padding, multiplier: multiplier)
+        
+        return self
+    }
+    
+    @discardableResult
+    func anchorViewCenter(referenceView: UIView, size: CGSize = .zero, padding: UIEdgeInsets = .zero) -> UIView {
         anchorViewCenterX(referenceView: referenceView, size: size, padding: padding)
         anchorViewCenterY(referenceView: referenceView, size: size, padding: padding)
+        
+        return self
     }
     
-    fileprivate func anchor(top: NSLayoutYAxisAnchor?,
-                            bottom: NSLayoutYAxisAnchor?,
-                            leading: NSLayoutXAxisAnchor?,
-                            trailing: NSLayoutXAxisAnchor?,
+    fileprivate func anchor(top: NSLayoutYAxisAnchor? = nil,
+                            bottom: NSLayoutYAxisAnchor? = nil,
+                            leading: NSLayoutXAxisAnchor? = nil,
+                            trailing: NSLayoutXAxisAnchor? = nil,
+                            width: NSLayoutDimension? = nil,
+                            height: NSLayoutDimension? = nil,
                             size: CGSize = .zero,
-                            padding: UIEdgeInsets = .zero) {
-        
+                            padding: UIEdgeInsets = .zero,
+                            multiplier: CGFloat = 1.0) {
         translatesAutoresizingMaskIntoConstraints = false
         
         if let top = top {
@@ -66,6 +103,14 @@ extension UIView {
         
         if let trailing = trailing {
             trailingAnchor.constraint(equalTo: trailing, constant: padding.right).isActive = true
+        }
+        
+        if let width = width {
+            widthAnchor.constraint(equalTo: width, multiplier: multiplier).isActive = true
+        }
+        
+        if let height = height {
+            heightAnchor.constraint(equalTo: height, multiplier: multiplier).isActive = true
         }
         
         if size.height != 0 {
